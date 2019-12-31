@@ -533,7 +533,7 @@ $config['adminView'] = 'Admin';
 
 # Admin modules
 ## Module user
-$config['users'] = $config['base_url'].$config['adminView'].'/servers';
+$config['users'] = $config['base_url'].$config['adminView'].'/users';
 $config['userProcess'] = $config['base_url'].$config['adminView'].'/serverProcess';
 
 ## Module server

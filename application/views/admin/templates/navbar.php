@@ -157,28 +157,35 @@
             <a href="<?=$this->config->item('servers');?>" class="nav-link">
               <i class="nav-icon fas fa-server"></i>
               <p>Máy Chủ</p>
-              <span class="badge badge-info right">6</span>
+              <span class="badge badge-success right">6</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="https://adminlte.io/docs/3.0" class="nav-link">
+            <a href="<?=$this->config->item('scripts');?>" class="nav-link">
               <i class="nav-icon fas fa-code"></i>
               <p>Execution Scripts</p>
-              <span class="badge badge-info right">6</span>
+              <span class="badge badge-success right">6</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="https://adminlte.io/docs/3.0" class="nav-link">
+            <a href="<?=$this->config->item('users');?>" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>Người Dùng</p>
-              <span class="badge badge-info right">6</span>
+              <span class="badge badge-success right">6</span>
             </a>
           </li>
           <li class="nav-header">TIỆN ÍCH</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<?=$this->config->item('sshGenerator');?>" class="nav-link">
               <i class="fas fa-fingerprint nav-icon"></i>
               <p>SSH Generator</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?=$this->config->item('terminalRecords');?>" class="nav-link">
+              <i class="fas fa-play nav-icon"></i>
+              <p>Terminal Records</p>
+              <span class="badge badge-success right">6</span>
             </a>
           </li>
           <li class="nav-header">TÀI LIỆU</li>
@@ -188,12 +195,7 @@
               <p>Kiểm Sát Quy Trình</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="<?=$this->config->item('documentLink');?>" target="_blank" class="nav-link">
-              <i class="fas fa-play nav-icon"></i>
-              <p>Terminal Records</p>
-            </a>
-          </li>
+          
           <li class="nav-header">TRANG</li>
           <li class="nav-item">
             <a href="<?=$this->config->item('logout');?>" class="nav-link">
