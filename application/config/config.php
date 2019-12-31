@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://localhost/'; # must be http://google.com/
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -521,3 +521,29 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+$config['adminLTE'] = $config['base_url'].'/public/AdminLTE-3.0.1/';
+$config['documentLink'] = 'https://docs.google.com/spreadsheets/d/1Up1MVNgEufPlSYTgc29MsJCTO791ekOE8Na94G5wOX0/edit#gid=1706336376';
+# View - access to the system
+$config['loginView'] = 'loginView';
+$config['loginProcess'] = 'loginProcess';
+$config['logout'] = $config['base_url'].'logout';
+
+# View - admin dashboard
+$config['adminView'] = 'Admin';
+
+# Admin modules
+## Module user
+$config['users'] = $config['base_url'].$config['adminView'].'/servers';
+$config['userProcess'] = $config['base_url'].$config['adminView'].'/serverProcess';
+
+## Module server
+$config['servers'] = $config['base_url'].$config['adminView'].'/servers';
+$config['serverProcess'] = $config['base_url'].$config['adminView'].'serverProcess';
+
+## Module Execution Script
+$config['scripts'] = $config['base_url'].$config['adminView'].'/scripts';
+$config['scriptProcess'] = $config['base_url'].$config['adminView'].'scriptProcess';
+
+# Admin utils
+$config['sshGenerator'] = $config['base_url'].$config['adminView'].'/sshGenerator';
+$config['terminalRecords'] = $config['base_url'].$config['adminView'].'/terminalRecords';
