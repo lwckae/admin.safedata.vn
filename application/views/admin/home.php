@@ -7,7 +7,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>SENBAC Dashboard</title>
-
+  <link rel="icon" href="https://www.senbac.com/wp-content/uploads/2016/09/cropped-SENBAC_final_black-32x32.png" sizes="32x32" />
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="<?=$this->config->item('adminLTE');?>plugins/fontawesome-free/css/all.min.css">
   <!-- overlayScrollbars -->

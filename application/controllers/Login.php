@@ -15,6 +15,12 @@ class Login extends CI_Controller {
         $this->backend_model->loginStrapi($email, $password);            
     }
 
+    public function logout()
+    {
+        $this->session->unset_userdata('account');
+        redirect('');
+    }
+
 }
 
 /* End of file Login.php */

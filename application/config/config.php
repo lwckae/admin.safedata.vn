@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://admin.senbac.com/'; # must be http://google.com/
+$config['base_url'] = 'http://localhost/'; # must be http://google.com/
 
 /*
 |--------------------------------------------------------------------------
@@ -527,7 +527,7 @@ $config['backendAPI'] = 'https://api.senbac.com/';
 # View - access to the system
 $config['loginView'] = 'loginView';
 $config['loginProcess'] = 'loginProcess';
-$config['logout'] = $config['base_url'].'logout';
+$config['logout'] = 'Logout';
 
 # View - admin dashboard
 $config['adminView'] = 'Admin';
