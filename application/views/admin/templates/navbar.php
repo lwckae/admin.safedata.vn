@@ -137,7 +137,7 @@
           <img src="<?=$this->config->item('adminLTE');?>dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Phan Văn Cường</a>
+          <a href="#" class="d-block"><?= $this->session->userdata('account')['user']['fullname'];?></a>
         </div>
       </div>
 
