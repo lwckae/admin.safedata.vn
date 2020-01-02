@@ -8,6 +8,14 @@ class Login extends CI_Controller {
         $this->load->view('login/view');
     }
 
+    public function process()
+    {
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
+
+        print_r($this->backend_model->loginStrapi($email, $password));
+    }
+
 }
 
 /* End of file Login.php */

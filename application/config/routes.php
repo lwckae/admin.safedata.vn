@@ -55,3 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route[$this->config->item('adminView')] = 'admin/page';
 $route['Admin/(:any)'] = 'admin/page/$1';
+
+$route[$this->config->item('loginProcess')] = 'login/process';

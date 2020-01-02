@@ -523,6 +523,7 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 $config['adminLTE'] = $config['base_url'].'/public/AdminLTE-3.0.1/';
 $config['documentLink'] = 'https://docs.google.com/spreadsheets/d/1Up1MVNgEufPlSYTgc29MsJCTO791ekOE8Na94G5wOX0/edit#gid=1706336376';
+$config['backendAPI'] = 'https://api.senbac.com/';
 # View - access to the system
 $config['loginView'] = 'loginView';
 $config['loginProcess'] = 'loginProcess';
