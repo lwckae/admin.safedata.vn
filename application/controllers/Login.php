@@ -12,7 +12,7 @@ class Login extends CI_Controller {
     {
         $email = $this->input->post('email');
         $password = $this->input->post('password');
-        $this->backend_model->loginStrapi($email, $password) == TRUE);            
+        $this->backend_model->loginStrapi($email, $password);            
     }
 
 }
