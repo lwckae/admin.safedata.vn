@@ -2,6 +2,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
+    public function __construct()
+    {
+        parent::__construct();
+        //Do your magic here
+        if( $this->session->has_userdata('account'))
+            redirect($this->config->item('adminView'));
+    }
 
     public function view()
     {
@@ -13,12 +20,6 @@ class Login extends CI_Controller {
         $email = $this->input->post('email');
         $password = $this->input->post('password');
         $this->backend_model->loginStrapi($email, $password);            
-    }
-
-    public function logout()
-    {
-        $this->session->unset_userdata('account');
-        redirect('');
     }
 
 }

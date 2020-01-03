@@ -157,7 +157,7 @@
             <a href="<?=$this->config->item('servers');?>" class="nav-link">
               <i class="nav-icon fas fa-server"></i>
               <p>Máy Chủ</p>
-              <span class="badge badge-success right">6</span>
+              <span class="badge badge-success right"><?= $this->backend_model->serverSingleAPI('servers/count');?></span>
             </a>
           </li>
           <li class="nav-item">

@@ -57,5 +57,5 @@ $route[$this->config->item('adminView')] = 'admin/page';
 $route['Admin/(:any)'] = 'admin/page/$1';
 
 $route[$this->config->item('loginProcess')] = 'login/process';
-$route[$this->config->item('logout')] = 'login/logout';
+$route[$this->config->item('logout')] = 'admin/logout';
 $route[$this->config->item('serverConnection')] = 'server/checkConnection';
