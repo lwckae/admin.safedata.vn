@@ -30,7 +30,29 @@ class Backend_model extends CI_Model {
             echo 'underfined case';
         exit();
     }
-    
+
+    public function serverSingleAPI($object){
+        // Get cURL resource
+        $curl = curl_init();
+        // Set some options - we are passing in a useragent too here
+        curl_setopt_array($curl, [
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_URL => $this->config->item('backendAPI').$object,
+            CURLOPT_HTTPHEADER => [
+              'Authorization: Bearer '.$this->session->userdata('account')['jwt'],
+            ],
+        ]);
+        // Send the request & save response to $resp
+        $resp = json_decode(curl_exec($curl), true);
+        // Close request to clear up some resources
+        curl_close($curl);
+        return $resp;
+    }
+
+    public function remoteCommand($serverinfo, $command)
+    {
+        return system('ssh -A '.$serverinfo['username'].'@'.$serverinfo['hostname'].' -p '.$serverinfo['port']. ' '.$command);
+    }
 
 }
 

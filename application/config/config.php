@@ -540,7 +540,8 @@ $config['userProcess'] = $config['base_url'].$config['adminView'].'/serverProces
 ## Module server
 $config['servers'] = $config['base_url'].$config['adminView'].'/servers';
 $config['serverProcess'] = $config['base_url'].$config['adminView'].'serverProcess';
-
+$config['serverConnection'] = 'serverConnection';
+$config['sshPrivateKeyPath'] = '~/.ssh/id_rsa';
 ## Module Execution Script
 $config['scripts'] = $config['base_url'].$config['adminView'].'/scripts';
 $config['scriptProcess'] = $config['base_url'].$config['adminView'].'scriptProcess';
