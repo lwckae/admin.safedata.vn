@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Log in</title>
+  <title>SENBAC SYSTEM | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <!-- fav icon -->
+  <link rel="icon" href="https://www.senbac.com/wp-content/uploads/2016/09/cropped-SENBAC_final_black-32x32.png" sizes="32x32" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?=$this->config->item('adminLTE');?>plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -73,12 +74,11 @@
         </a>
       </div>
       <!-- /.social-auth-links -->
-
-      <p class="mb-1">
-        <a href="#">I forgot my password</a>
-      </p>
       <p class="mb-0">
         <a href="#" class="text text-danger text-center"><?=$this->session->flashdata('message');?></a>
+      </p>
+      <p class="mb-1">
+        <a href="#">I forgot my password</a>
       </p>
     </div>
     <!-- /.login-card-body -->
