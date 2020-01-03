@@ -9,9 +9,10 @@ class Server extends CI_Controller {
             'hostname' => $this->input->post('hostname'),
             'port' => $this->input->post('port')
         );
-        if(TRUE)
+        $data = system('ssh '.$server['username'].'@'.$server['hostname'].' -p '.$server['port'].' -o '.'StrictHostKeyChecking=no echo test');
+        if($data == 'test')
         {
-            echo '<div class="badge badge-success">Connected</div>';
+            echo '<div class="badge badge-success"><i class="fa fa-check"></i> Successfully</div>';
         }
         else
             echo '<div class="badge badge-danger">Failed</div>';

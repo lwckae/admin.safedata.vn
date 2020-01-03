@@ -50,9 +50,9 @@
                 <tbody>
                 <?php foreach($data as $server):?>
                   <tr>
-                  <td><?=$server['id'];?></td>
-                  <td><?=$server['hostname'];?></td>
-                  <td><?=$server['port'];?></td>
+                  <td><span class="badge badge-secondary"><?=$server['id'];?></span></td>
+                  <td><div class="badge badge-success"><?=$server['hostname'];?></div></td>
+                  <td><div class="badge badge-success"><?=$server['port'];?></div></td>
                   <td><div id="serverConnection_<?=$server['id'];?>">Loading ...</div></td>
                   <td>
                     <button class="btn btn-info">
