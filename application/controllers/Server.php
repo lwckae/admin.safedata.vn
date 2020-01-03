@@ -9,10 +9,15 @@ class Server extends CI_Controller {
             'hostname' => $this->input->post('hostname'),
             'port' => $this->input->post('port')
         );
-        if(passthru('uname') == 'Linux')
+        echo '<!-- debug ';
+        $os = system('uname');
+        echo ' end debug -->';
+        if(str_replace(array("\n", "\r"),'', $os) == 'Linux')
         {
-            $data = shell_exec('ssh '.$server['username'].'@'.$server['hostname'].' -p '.$server['port'].' -o '.'StrictHostKeyChecking=no echo test');
-            if($data == 'test')
+            echo '<!-- debug ';
+            $request = system('ssh '.$server['username'].'@'.$server['hostname'].' -p '.$server['port'].' -o '.'StrictHostKeyChecking=no echo test');
+            echo ' end debug -->';
+            if($request == 'test')
             {
                 echo '<div class="badge badge-success"><i class="fa fa-check"></i> Successfully</div>';
             }
